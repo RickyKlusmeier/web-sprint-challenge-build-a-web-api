@@ -21,12 +21,10 @@ router.get('/:id', (req, res) => {
     .then(foundProject => {
         if(!foundProject) {
             res.status(404).json({
-                message: 'definitely not here'
+                message: `That's not here`
             })
         } else {
-            res.status(500).json({
-                message: err.message
-            })
+            res.status(200).json(foundProject)
         }
     })
     .catch(err => {
