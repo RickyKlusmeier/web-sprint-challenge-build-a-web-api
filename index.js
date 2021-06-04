@@ -12,3 +12,12 @@ I need this code, but don't know where, perhaps should make some middleware, don
 
 Pull your server into this file and start it!
 */
+
+
+const server = require('./api/server')
+
+const port = 4001 
+
+server.listen(port, () => {
+    console.log(`Aye we're on port ${port} come find us`)
+})
